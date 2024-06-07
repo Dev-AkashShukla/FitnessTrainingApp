@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:orientation="vertical"
+        tools:context="com.getfit.fitnessapp.SignInUpProfile.ChangePasswordActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/textView_change_pwd_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/white"
+                    android:text="Change food"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:id="@+id/textView_food_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/textView_change_pwd_head"
+                    android:text="You can change food"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-50dp"
+                android:background="@drawable/rounded_corners_background"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/textViewFoodEditGeneral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/black"
+                    android:text="General"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/RL_food_edit_general"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_corners_white">
+
+                    <TextView
+                        android:id="@+id/textViewFoodEditName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Name" />
+
+                    <EditText
+                        android:id="@+id/editTextFoodEditName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewFoodEditName"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter food name"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/divider_food_edit_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewFoodEditName"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodEditManufactor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_food_edit_name"
+                        android:layout_margin="10dp"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Manufactor" />
+
+                    <EditText
+                        android:id="@+id/editTextFoodEditManufactor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/divider_food_edit_name"
+                        android:layout_toEndOf="@id/textViewFoodEditManufactor"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter manufactor name"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/divider_food_edit_manufactor"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewFoodEditManufactor"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodEditDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_food_edit_manufactor"
+                        android:layout_margin="10dp"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Description" />
+
+                    <EditText
+                        android:id="@+id/editTextFoodEditDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/divider_food_edit_manufactor"
+                        android:layout_toEndOf="@id/textViewFoodEditDescription"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter description"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/divider_food_edit_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewFoodEditDescription"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodEditBarcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_food_edit_description"
+                        android:layout_margin="10dp"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Barcode" />
+
+                    <EditText
+                        android:id="@+id/editTextFoodEditBarcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/divider_food_edit_description"
+                        android:layout_toEndOf="@id/textViewFoodEditBarcode"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter barcode"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/divider_food_edit_barcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewFoodEditBarcode"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodEditCategoryMain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_food_edit_barcode"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Category(main)" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFoodEditCategoryMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_food_edit_barcode"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/textViewFoodEditCategoryMain"
+                        android:background="@android:color/transparent"
+                        android:entries="@array/array_mesurments"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@drawable/edittextcursor" />
+
+                    <View
+                        android:id="@+id/divider_food_edit_category_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewFoodEditCategoryMain"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodEditCategorySub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_food_edit_category_main"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Category(sub)" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFoodEditCategorySub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_food_edit_category_main"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/textViewFoodEditCategorySub"
+                        android:background="@android:color/transparent"
+                        android:entries="@array/array_mesurments"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@drawable/edittextcursor" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/textViewFoodEditServing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/black"
+                    android:text="Serving"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+
+                <RelativeLayout
+                    android:id="@+id/RL_food_edit_serving"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_corners_white">
+
+                    <TextView
+                        android:id="@+id/textViewFoodEditMesurment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Mesurment" />
+
+                    <EditText
+                        android:id="@+id/editTextFoodEditServingSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewFoodEditMesurment"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter Serv Size"
+                        android:inputType="number"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editTextFoodEditMesurment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/editTextFoodEditServingSize"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter mesur"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/divider_food_edit_mesurment"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewFoodEditMesurment"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodEditServingWord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_food_edit_mesurment"
+                        android:layout_margin="10dp"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Word" />
+
+                    <EditText
+                        android:id="@+id/editTextFoodEditServingNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/divider_food_edit_mesurment"
+                        android:layout_toEndOf="@id/textViewFoodEditServingWord"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter number"
+                        android:inputType="number"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editTextFoodEditServingWord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/divider_food_edit_mesurment"
+                        android:layout_toEndOf="@id/editTextFoodEditServingNumber"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter word"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RL_calories_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/imageViewFoodView"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corners_background">
+
+                <TextView
+                    android:id="@+id/textViewCalTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Calories table" />
+
+                <RelativeLayout
+                    android:id="@+id/Layout"
+                    android:layout_below="@+id/textViewCalTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounded_corners_white">
+
+                <TextView
+                    android:id="@+id/textViewEnergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="90dp"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:text="Energy" />
+
+                <TextView
+                    android:id="@+id/textViewProteins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/textViewEnergy"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:text="Proteins" />
+
+                <TextView
+                    android:id="@+id/textViewCarbs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/textViewProteins"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:text="Carbs" />
+
+                <TextView
+                    android:id="@+id/textViewFat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/textViewCarbs"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:text="Fat" />
+
+                <View
+                    android:id="@+id/divider_table_fields"
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/textViewEnergy"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/textViewPerHundred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@+id/divider_table_fields"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:textSize="11dp"
+                    android:text="Per 100 gram" />
+
+                <EditText
+                    android:id="@+id/editTextFoodEditEnergyPerHundred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@+id/divider_table_fields"
+                    android:layout_toEndOf="@id/textViewPerHundred"
+                    android:background="@android:color/transparent"
+                    android:hint="Energy"
+                    android:inputType="number"
+                    android:padding="6dp"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editTextFoodEditProteinsPerHundred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@+id/divider_table_fields"
+                    android:layout_toEndOf="@id/editTextFoodEditEnergyPerHundred"
+                    android:background="@android:color/transparent"
+                    android:hint="Prot"
+                    android:inputType="number"
+                    android:padding="6dp"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editTextFoodEditCarbsPerHundred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@+id/divider_table_fields"
+                    android:layout_toEndOf="@id/editTextFoodEditProteinsPerHundred"
+                    android:background="@android:color/transparent"
+                    android:hint="Carbs"
+                    android:inputType="number"
+                    android:padding="6dp"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editTextFoodEditFatPerHundred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@+id/divider_table_fields"
+                    android:layout_toEndOf="@id/editTextFoodEditCarbsPerHundred"
+                    android:background="@android:color/transparent"
+                    android:hint="Fat"
+                    android:inputType="number"
+                    android:padding="6dp"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonSaveFoodEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/RL_calories_table"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="70dp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_corners_button"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

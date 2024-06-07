@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:orientation="vertical"
+        tools:context="com.getfit.fitnessapp.SignInUpProfile.ChangePasswordActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/textViewFoodName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/white"
+                    android:text="Food Name"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:id="@+id/textViewFoodManufactorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/textViewFoodName"
+                    android:text="Food Manufactor"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                <TextView
+                    android:id="@+id/textViewFoodAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/textViewFoodManufactorName"
+                    android:text="Food About"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-50dp"
+                android:background="@drawable/border"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/imageViewFoodView"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textAlignment="center"
+                    android:src="@drawable/food" />
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_corners_white"
+                    android:layout_below="@+id/imageViewFoodView">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners_white">
+
+
+                <RelativeLayout
+                    android:id="@+id/RL_calories_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewFoodView"
+                    android:background="@drawable/rounded_corners_white">
+
+                    <TextView
+                        android:id="@+id/textViewFoodDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="Food description" />
+
+                    <View
+                        android:id="@+id/divider_food_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewFoodDescription"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewCalTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/divider_food_description"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Calories table" />
+
+                    <View
+                        android:id="@+id/divider_cal_table"
+                        android:layout_width="250dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewCalTable"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewEnergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="90dp"
+                        android:layout_below="@+id/divider_cal_table"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Energy" />
+
+                    <TextView
+                        android:id="@+id/textViewProteins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewEnergy"
+                        android:layout_below="@+id/divider_cal_table"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Proteins" />
+
+                    <TextView
+                        android:id="@+id/textViewCarbs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewProteins"
+                        android:layout_below="@+id/divider_cal_table"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Carbs" />
+
+                    <TextView
+                        android:id="@+id/textViewFat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewCarbs"
+                        android:layout_below="@+id/divider_cal_table"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Fat" />
+
+                    <View
+                        android:id="@+id/divider_table_fields"
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewEnergy"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewPerHundred"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/divider_table_fields"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:text="Per 100 gram" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodEnergyPerHundred"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewPerHundred"
+                        android:layout_below="@+id/divider_table_fields"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Energy" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodProteinsPerHundred"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_toEndOf="@id/textViewFoodEnergyPerHundred"
+                        android:layout_below="@+id/divider_table_fields"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Prot" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodCarbsPerHundred"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_toEndOf="@id/textViewFoodProteinsPerHundred"
+                        android:layout_below="@+id/divider_table_fields"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Carbs" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodFatPerHundred"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_toEndOf="@id/textViewFoodCarbsPerHundred"
+                        android:layout_below="@+id/divider_table_fields"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Fat" />
+
+                    <View
+                        android:id="@+id/divider_per_hundred"
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewFoodEnergyPerHundred"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewPerMeal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/divider_per_hundred"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:textSize="11dp"
+                        android:text="Per meal" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodEnergyPerMeal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_toEndOf="@id/textViewPerMeal"
+                        android:layout_below="@+id/divider_per_hundred"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Energy" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodProteinsPerMeal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_toEndOf="@id/textViewFoodEnergyPerMeal"
+                        android:layout_below="@+id/divider_per_hundred"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Prot" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodCarbsPerMeal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_toEndOf="@id/textViewFoodProteinsPerMeal"
+                        android:layout_below="@+id/divider_per_hundred"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Carbs" />
+
+                    <TextView
+                        android:id="@+id/textViewFoodFatPerMeal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_toEndOf="@id/textViewFoodCarbsPerMeal"
+                        android:layout_below="@+id/divider_per_hundred"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Fat" />
+
+                </RelativeLayout>
+                </HorizontalScrollView>
+
+                </ScrollView>
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="10dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:orientation="vertical"
+        tools:context="com.getfit.fitnessapp.CalorieCounter.GoalEditDietFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/textView_change_pwd_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/white"
+                    android:text="Change your goals"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:id="@+id/textView_change_pwd_instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/textView_change_pwd_head"
+                    android:text="You can change your goals"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-50dp"
+                android:background="@drawable/border"
+                android:id="@+id/RL_goal_status_edit"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/RL_goals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_corners_white">
+
+                    <TextView
+                        android:id="@+id/textViewCurrentWeight"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:text="@string/weight" />
+
+                    <EditText
+                        android:id="@+id/editTextGoalCurrentWeight"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/textViewCurrentWeight"
+                        android:inputType="number"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor"
+                        android:textSize="16sp"
+                        android:ems="3"/>
+
+                    <TextView
+                        android:id="@+id/textViewGoalCurrentWeightType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/editTextGoalCurrentWeight"
+                        android:padding="6dp"
+                        android:text="@string/kg" />
+
+                    <View
+                        android:id="@+id/divider_current_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/editTextGoalCurrentWeight"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewTargetWeight"
+                        android:layout_width="122dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@+id/divider_current_weight"
+                        android:padding="6dp"
+                        android:text="Target weight" />
+
+                    <EditText
+                        android:id="@+id/editTextGoalTargetWeight"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/textViewTargetWeight"
+                        android:layout_below="@+id/divider_current_weight"
+                        android:inputType="number"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textViewGoalTargetWeightType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/editTextGoalTargetWeight"
+                        android:layout_below="@+id/divider_current_weight"
+                        android:padding="6dp"
+                        android:text="@string/kg" />
+
+                    <View
+                        android:id="@+id/divider_target_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/editTextGoalTargetWeight"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <TextView
+                        android:id="@+id/textView_target_want"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/divider_target_weight"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:text="I want to" />
+
+                    <Spinner
+                        android:id="@+id/spinnerIWantTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@+id/divider_target_weight"
+                        android:layout_toEndOf="@id/textView_target_want"
+                        android:background="@android:color/transparent"
+                        android:entries="@array/array_weakly_goals_a"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor" />
+
+                    <View
+                        android:id="@+id/divider_weekly_goals"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/spinnerIWantTo"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textView_weakly_goal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/divider_weekly_goals"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:text="Weekly goal" />
+
+                    <Spinner
+                        android:id="@+id/spinnerWeeklyGoal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@+id/divider_weekly_goals"
+                        android:layout_toEndOf="@id/textView_weakly_goal"
+                        android:background="@android:color/transparent"
+                        android:entries="@array/array_weakly_goals_kg"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor" />
+
+                    <TextView
+                        android:id="@+id/textView_weakly_goal_units"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/divider_weekly_goals"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/spinnerWeeklyGoal"
+                        android:padding="6dp"
+                        android:text="kg each week" />
+
+                    <View
+                        android:id="@+id/divider_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/spinnerWeeklyGoal"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textView_activity_levels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_weight"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:text="@string/activity_level" />
+
+                    <Spinner
+                        android:id="@+id/spinnerActivityLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@+id/divider_weight"
+                        android:layout_toEndOf="@id/textView_activity_levels"
+                        android:background="@android:color/transparent"
+                        android:entries="@array/array_activity_levels"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/edittextcursor" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/buttonGoalSubmit"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/RL_goals"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_corners_button"
+                    android:text="Save" />
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="10dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "910017467585",
+    "project_id": "fitness-app-eb0be",
+    "storage_bucket": "fitness-app-eb0be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910017467585:android:ca459e72e490f32444f040",
+        "android_client_info": {
+          "package_name": "com.getfit.fitnessapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8od3gJiIezVklhq6uIk1_J7rKVmFV5cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

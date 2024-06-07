@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:orientation="vertical"
+        tools:context="com.getfit.fitnessapp.CalorieCounter.GoalDietFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/textView_change_pwd_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/white"
+                    android:text="Your Goals"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:id="@+id/textView_change_pwd_instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/textView_change_pwd_head"
+                    android:text="Here you can see your nutritional goals and the amount of calories you need"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-50dp"
+                android:background="@drawable/border"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/RL_goal_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_corners_white">
+
+                    <TextView
+                        android:id="@+id/textViewGoalStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:text="Status" />
+
+                    <TextView
+                        android:id="@+id/textViewCurrentWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewGoalStatus"
+                        android:layout_margin="10dp"
+                        android:padding="6dp"
+                        android:text="Weight" />
+
+
+                    <TextView
+                        android:id="@+id/textViewGoalCurrentWeightNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewGoalStatus"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/textViewCurrentWeight"
+                        android:padding="6dp"
+                        android:text="Current weight" />
+
+                    <TextView
+                        android:id="@+id/textViewTargetWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewCurrentWeight"
+                        android:layout_margin="10dp"
+                        android:padding="6dp"
+                        android:text="Target" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalCurrentTargetNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewCurrentWeight"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/textViewTargetWeight"
+                        android:padding="6dp"
+                        android:text="Target weight" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewTargetWeight"
+                        android:layout_margin="10dp"
+                        android:padding="6dp"
+                        android:text="Method" />
+
+
+                    <TextView
+                        android:id="@+id/textViewGoalMethodText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewTargetWeight"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/textViewGoalMethod"
+                        android:padding="6dp"
+                        android:text="Method text" />
+
+                    <TextView
+                        android:id="@+id/textViewActivityLevelText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewGoalMethod"
+                        android:layout_margin="10dp"
+                        android:padding="6dp"
+                        android:text="Activity" />
+
+
+                    <TextView
+                        android:id="@+id/textViewActivityLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewGoalMethod"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/textViewTargetWeight"
+                        android:padding="6dp"
+                        android:text="Activity level" />
+
+
+                </RelativeLayout>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_corners_white"
+                    android:layout_below="@+id/RL_goal_status">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners_white">
+
+
+                <RelativeLayout
+                    android:id="@+id/RL_goal_numbers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/RL_goal_status"
+                    android:background="@drawable/rounded_corners_white">
+
+                    <TextView
+                        android:id="@+id/textViewGoalNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:text="Numbers" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxGoalToggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/textViewGoalNumbers"
+                        android:layout_marginStart="130dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:text="Advanced" />
+
+
+                    <TextView
+                        android:id="@+id/textViewWantLose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewGoalNumbers"
+                        android:layout_margin="10dp"
+                        android:padding="6dp"
+                        android:text="If you want to loose weight" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalHeadcellEnergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="90dp"
+                        android:layout_below="@+id/textViewWantLose"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Energy" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalHeadcellProteins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewGoalHeadcellEnergy"
+                        android:layout_below="@+id/textViewWantLose"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Proteins" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalHeadcellCarbs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewGoalHeadcellProteins"
+                        android:layout_below="@+id/textViewWantLose"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Carbs" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalHeadcellFat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewGoalHeadcellCarbs"
+                        android:layout_below="@+id/textViewWantLose"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Fat" />
+
+                    <View
+                        android:id="@+id/divider_table_fields"
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewGoalHeadcellEnergy"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textViewLooseWithoutActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/divider_table_fields"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:text="Without activity" />
+
+
+                    <TextView
+                        android:id="@+id/textViewGoalEnergyDiet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewKeepWithoutActivity"
+                        android:layout_below="@+id/divider_table_fields"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="En" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalProteinsDiet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalEnergyDiet"
+                        android:layout_below="@+id/divider_table_fields"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Prot" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalCarbsDiet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalProteinsDiet"
+                        android:layout_below="@+id/divider_table_fields"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Carbs" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalFatDiet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalCarbsDiet"
+                        android:layout_below="@+id/divider_table_fields"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Fat" />
+
+
+                    <TextView
+                        android:id="@+id/textViewLooseWithActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/textViewLooseWithoutActivity"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:text="With activity" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalEnergyWithActivityAndDiet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_toEndOf="@id/textViewKeepWithActivity"
+                        android:layout_below="@+id/textViewLooseWithoutActivity"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="En" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalProteinsWithActivityAndDiet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalEnergyWithActivityAndDiet"
+                        android:layout_below="@+id/textViewLooseWithoutActivity"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Prot" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalCarbsWithActivityAndDiet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalProteinsWithActivityAndDiet"
+                        android:layout_below="@+id/textViewLooseWithoutActivity"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Carbs" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalFatWithActivityAndDiet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalCarbsWithActivityAndDiet"
+                        android:layout_below="@+id/textViewLooseWithoutActivity"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Fat" />
+
+
+                    <View
+                        android:id="@+id/divider_table"
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewLooseWithActivity"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <TextView
+                        android:id="@+id/textViewWantKeep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/divider_table"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:text="If you want to keep your weight" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalHeadcellEnergyKeep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="90dp"
+                        android:layout_below="@+id/textViewWantKeep"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Energy" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalHeadcellProteinsKeep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewGoalHeadcellEnergyKeep"
+                        android:layout_below="@+id/textViewWantKeep"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Proteins" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalHeadcellCarbsKeep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewGoalHeadcellProteinsKeep"
+                        android:layout_below="@+id/textViewWantKeep"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Carbs" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalHeadcellFatKeep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewGoalHeadcellCarbsKeep"
+                        android:layout_below="@+id/textViewWantKeep"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Fat" />
+
+                    <View
+                        android:id="@+id/divider_table_fields_keep"
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/textViewGoalHeadcellEnergyKeep"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <TextView
+                        android:id="@+id/textViewKeepWithoutActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/divider_table_fields_keep"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:text="Without activity" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalEnergyBMR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/textViewLooseWithoutActivity"
+                        android:layout_below="@+id/divider_table_fields_keep"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="En" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalProteinsBMR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalEnergyBMR"
+                        android:layout_below="@+id/divider_table_fields_keep"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Prot" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalCarbsBMR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalProteinsBMR"
+                        android:layout_below="@+id/divider_table_fields_keep"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Carbs" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalFatBMR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalCarbsBMR"
+                        android:layout_below="@+id/divider_table_fields_keep"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Fat" />
+
+                    <TextView
+                        android:id="@+id/textViewKeepWithActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/textViewKeepWithoutActivity"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:text="With activity" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalEnergyWithActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_toEndOf="@id/textViewLooseWithActivity"
+                        android:layout_below="@+id/textViewKeepWithoutActivity"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="En" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalProteinsWithActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalEnergyWithActivity"
+                        android:layout_below="@+id/textViewKeepWithoutActivity"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Prot" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalCarbsWithActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalProteinsWithActivity"
+                        android:layout_below="@+id/textViewKeepWithoutActivity"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Carbs" />
+
+                    <TextView
+                        android:id="@+id/textViewGoalFatWithActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/textViewGoalCarbsWithActivity"
+                        android:layout_below="@+id/textViewKeepWithoutActivity"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:text="Fat" />
+
+                </RelativeLayout>
+                </HorizontalScrollView>
+
+                </ScrollView>
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="10dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

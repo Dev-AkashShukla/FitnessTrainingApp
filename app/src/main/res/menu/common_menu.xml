@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Refresh"
+        android:icon="@drawable/ic_refresh_white"
+        android:id="@+id/menu_refresh"
+        android:alphabeticShortcut="r"/>
+
+    <item android:title="Update Profile"
+        android:id="@+id/menu_update_profile"/>
+
+    <item android:title="Update Email"
+        android:id="@+id/menu_update_email"/>
+
+    <item android:title="Food Diary"
+        android:id="@+id/menu_food_diary"/>
+
+    <item android:title="Training"
+        android:id="@+id/menu_training"/>
+
+    <item android:title="Tips and Tricks"
+        android:id="@+id/menu_tips"/>
+
+    <item android:title="Change Password"
+        android:id="@+id/menu_change_password"/>
+
+    <item android:title="Delete Profile"
+        android:id="@+id/menu_delete_profile"/>
+
+    <item android:title="Logout"
+        android:id="@+id/menu_logout"/>
+
+</menu>
